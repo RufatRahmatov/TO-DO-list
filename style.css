@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.siderbar {
+  position: fixed;
+  top: 0px;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  transition: all 200ms ease-in-out;
+}
+
+.siderbar .toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  /* background: red; */
+}
+.siderbar .toggle-btn span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  transform: translateY(-50%);
+  transition: all 200ms ease-in-out;
+}
+.siderbar .toggle-btn span:nth-child(1) {
+  top: 10%;
+}
+
+.siderbar .toggle-btn span:nth-child(2) {
+  top: 50%;
+}
+
+.siderbar .toggle-btn span:nth-child(3) {
+  top: 90%;
+}
+
+.siderbar .links a {
+  display: block;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: #f5f5f5;
+  cursor: pointer;
+  border-bottom: 1px solid #1b1b1b;
+}
+
+.siderbar .links a.active,
+.siderbar .links a:hover {
+  background: #222;
+  color: #00acee;
+}
+
+.siderbar .links a i {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.siderbar.active {
+  left: 0px;
+}
+.siderbar.active .toggle-btn span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.siderbar.active .toggle-btn span:nth-child(2) {
+  display: none;
+}
+.siderbar.active .toggle-btn span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
